@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
+<title id="title">Abhay Khot | Distributed inference</title><desc id="desc">Conceptual request flow from gateway to scheduler to GPU workers and streaming output.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}.label{font-size:13px;letter-spacing:2px;fill:#8da0b8}.node{fill:#111f30;stroke:#2c415b}.name{font-size:17px;fill:#e6edf5;font-weight:600}.sub{font-size:12px;fill:#9badc3}.flow{stroke:#42617b;stroke-width:2;fill:none}.packet{fill:#b4f369}@media(prefers-reduced-motion:reduce){.packet{display:none}}</style>
+<rect width="1200" height="440" rx="20" fill="#0a111c"/>
+<path d="M40 152H1160" stroke="#263548"/>
+<text x="40" y="44" class="label">SYSTEMS / INFERENCE / COMPUTE</text>
+<text x="38" y="99" fill="#f3f6fb" font-size="46" font-weight="700">Abhay Khot</text>
+<text x="40" y="128" fill="#a9b8cc" font-size="17">Exploring the systems behind efficient AI.</text>
+<circle cx="1020" cy="43" r="4" fill="#b4f369"/><text x="1033" y="48" class="label">REQUEST FLOW</text>
+<path class="flow" d="M230 270H300 M510 270H565V205H625 M565 270H625 M565 270V335H625 M825 205H875V270H930 M825 270H930 M825 335H875V270"/>
+<rect class="node" x="40" y="230" width="190" height="80" rx="10"/><text class="name" x="60" y="263">API GATEWAY</text><text class="sub" x="60" y="287">Requests + admission</text>
+<rect class="node" x="300" y="230" width="210" height="80" rx="10"/><text class="name" x="320" y="263">SCHEDULER</text><text class="sub" x="320" y="287">Continuous batching + KV</text>
+<rect class="node" x="625" y="177" width="200" height="56" rx="8"/><text class="name" x="645" y="202">GPU 0</text><text class="sub" x="720" y="202">PREFILL</text><rect class="node" x="625" y="242" width="200" height="56" rx="8"/><text class="name" x="645" y="267">GPU 1</text><text class="sub" x="720" y="267">DECODE</text><rect class="node" x="625" y="307" width="200" height="56" rx="8"/><text class="name" x="645" y="332">GPU 2</text><text class="sub" x="720" y="332">DECODE</text><rect class="node" x="930" y="230" width="230" height="80" rx="10"/><text class="name" x="950" y="263">TOKEN STREAM</text><text class="sub" x="950" y="287">Incremental responses</text>
+<circle class="packet" r="4" cx="230" cy="270"><animate attributeName="cx" values="230;300" dur="1.6s" repeatCount="indefinite"/></circle>
+<circle class="packet" r="4" cx="510" cy="270"><animate attributeName="cx" values="510;625" dur="1.6s" begin="0.5s" repeatCount="indefinite"/></circle>
+<circle class="packet" r="4" cx="825" cy="270"><animate attributeName="cx" values="825;930" dur="1.6s" begin="1s" repeatCount="indefinite"/></circle>
+<text x="40" y="408" class="label">CONCEPTUAL ARCHITECTURE</text><text x="725" y="408" class="sub">Scheduling · Memory · Reliability · Observability</text></svg>
