@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/distributed-inference.svg" width="100%" alt="Abhay Khot — an animated neon compute playground. Inference, GPUs, distributed systems, and endless curiosity." />
+  <img src="assets/compute-playground-v2.svg" width="100%" alt="Abhay Khot — an animated neon compute playground. Inference, GPUs, distributed systems, and endless curiosity." />
 </p>
 
 <p align="center">
